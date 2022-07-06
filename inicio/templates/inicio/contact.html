@@ -1,0 +1,48 @@
+{% extends "inicio/encabezado.html"%} {% block contenido %}
+
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4" style="padding-left:100px ;">
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <img src='https://cdn.pixabay.com/photo/2018/04/20/17/18/cat-3336579_960_720.jpg' class="img-thumbnail" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="col" style="margin-left:150px;">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Gato con Botaz ......">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="545343....">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary" type="button">Postear</button>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
