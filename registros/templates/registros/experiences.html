@@ -1,56 +1,61 @@
 {% extends "inicio/encabezado.html"%} {% block titulo%} Experiencias {% endblock %} {% block contenido %}
 
+
+
+
+
 <div class="a" style="background-color:#ffff ;">
 
-
-
-    <div class="row row-cols-1 row-cols-md-1 m-4 g-4" style="width:500px ;">
-        <div class="col-5 row-2" style="width:500px; position: absolute; margin-left:600px ;">
+        <div class="col-3 row-2 mt-3" style="width:800px;  margin-left:100px ;">
             <div class="card h-100">
                 <div class="card-body">
                     <div class="mb-3">
-                        <h5 class="card-title m-auto-0">Cuentanos tu experiencia</h5>
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Default file input example</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-                        <button class="btn btn-primary" type="button">Postear</button>
-                    </div>
+                        <form class="form-horizontal" action="{% url 'Registrar'%}" method="POST" role="form">
+                            {%csrf_token%}
+                        <div class="mb-3">
+                            <h5 class="card-title m-auto-0">Cuentanos tu experiencia</h5>
+                            <label class="col-sm-2 control-label text-right">Nombre:</label>
+                            <input name="nombre" type="text" class="form-control">
+                            </div>
+                        <div class="mb-3">
+                            <label class="col-sm-2 control-label text-right">Email:</label>
+                            <input name="email" cols="30" rows="5" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-sm-2 control-label text-right">Mensaje:</label>
+                            <textarea name="mensaje" cols="50" rows="10" class="form-control"></textarea>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="imagen" class="form-label">Default file input example</label>
+                            <input class="form-control" type="file" name="imagen" id="imagen">
+                          </div> -->
+                        <div class="form-actions text-right">
+                            <input type="submit" value="Enviar" class="btn btn-primary">
+                        </div>
                 </div>
             </div>
+        </div> 
         </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src='https://cdn.pixabay.com/photo/2020/07/26/12/12/bike-5439360_960_720.jpg' class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
+            
+        <div class="card border-0 m-4">
+        <div class="pt-3 m-auto"><h2>Comentarios</h2></div>
 
-        <div class="col mb-5 p-3">
-            <div class="card h-100">
-                <img src='https://cdn.pixabay.com/photo/2019/07/23/23/48/bicycle-4358893_960_720.jpg' class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
+        <div class="card-group m-3 row row-cols-1 " style="padding-right:10px ;">
+                {% for com in form %}
+                <div class="card border-0 m-1 style="width: 18rem;">
+                    <img src="https://random.imagecdn.app/500/150" class="rounded mx-auto d-block card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{com.nombre}}</h5>
+                      <p class="card-text">{{com.mensaje}}</p>
+                      <div>
+                        <p class="card-text muted">Subido el: {{com.created}}</p>
+                      </div>
+                    </div>
+                  </div>
+           
+             
+               {% endfor %}
 
-        </div>
+       </div>
+</div>
         {% endblock %}

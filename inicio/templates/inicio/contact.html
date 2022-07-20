@@ -15,31 +15,32 @@
         <div class="card h-100">
             <div class="card-body">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Name</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Gato con Botaz ......">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="545343....">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">Default file input example</label>
-                    <input class="form-control" type="file" id="formFile">
-                </div>
-                <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-primary" type="button">Postear</button>
-
-                </div>
-            </div>
-
+                    <form
+  name="contact"
+  method="POST"
+  netlify-honeypot="bot-field"
+  data-netlify="true"
+>
+{% csrf_token %}
+  <p class="hidden">
+    <label class="form-label">
+    Nombre <input class="form-control" name="bot-field" />
+    </label>
+  </p>
+  <p>
+    <label class="form-label">
+      Email: <input class="form-control" type="text" name="email" />
+    </label>
+  </p>
+  <p>
+    <label class="form-label">
+      Message: <textarea class="form-control" name="message"></textarea>
+    </label>
+  </p>
+  <p>
+    <button  class="btn btn-primary" type="submit">Send</button>
+  </p>
+</form>
         </div>
     </div>
 </div>

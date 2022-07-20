@@ -26,6 +26,7 @@ urlpatterns = [
     path('experiences/', views_registros.registros3, name='Experiencias'),
     path('contact/', views.contact, name='Contacto'),
     path('about/', views.about, name='About'),
+    path('registrar/',views_registros.registrar,name="Registrar"),
 ]
 
 
