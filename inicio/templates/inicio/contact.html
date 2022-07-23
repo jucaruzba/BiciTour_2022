@@ -3,7 +3,7 @@
 
 
 
-<div class="row row-cols-1 row-cols-md-3 g-4" style="padding-left:100px ;">
+<div class="row row-cols-1 pt-5 row-cols-md-3 g-4" style="padding-left:100px ;">
     <div class="col">
         <div class="card h-100">
             <div class="card-body">
@@ -11,31 +11,36 @@
             </div>
         </div>
     </div>
-    <div class="col" style="margin-left:150px;">
+
+    <div class="col pt-5" style="margin-left:150px;">
         <div class="card h-100">
             <div class="card-body">
                 <div class="mb-3">
-                    <form
-  name="contact"
-  method="POST"
-  netlify-honeypot="bot-field"
-  data-netlify="true"
->
+                    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
 {% csrf_token %}
-  <p class="hidden">
+  <p>
     <label class="form-label">
-    Nombre <input class="form-control" name="bot-field" />
+    Name <input class="form-control" type="text" placeholder="Write your Fullname" required  name="bot-field" />
     </label>
   </p>
   <p>
     <label class="form-label">
-      Email: <input class="form-control" type="text" name="email" />
+      Email: <input class="form-control" type="email" required name="email" />
     </label>
   </p>
   <p>
-    <label class="form-label">
-      Message: <textarea class="form-control" name="message"></textarea>
-    </label>
+    <label class="form-label">You're a...</label>
+    <select class="form-control" name="role[]">
+      <option value="turista">Tourist</option>
+      <option value="ciudadano">Citizen</option>
+      <option value="no_responder">I wish not to answer</option>
+    </select>
+  </p>
+  <br><br><br>
+  <p>
+    <label class="form-label">Enter your message </label>
+    <textarea class="form-control" name="message" required></textarea>
+    
   </p>
   <p>
     <button  class="btn btn-primary" type="submit">Send</button>

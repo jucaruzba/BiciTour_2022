@@ -36,26 +36,31 @@
             </div>
         </div> 
         </div>
-            
+        <div class="row row-cols-5 row-cols-md-1 g-4">
+        
         <div class="card border-0 m-4">
+            
         <div class="pt-3 m-auto"><h2>Comentarios</h2></div>
 
-        <div class="card-group m-3 row row-cols-1 " style="padding-right:10px ;">
+        <div class="card-group m-3 " style="padding-right:10px ;">
                 {% for com in form %}
-                <div class="card border-0 m-1 style="width: 18rem;">
+                <div class="card border-0 m-1 style=width: 18rem;">
+                    
                     <img src="https://random.imagecdn.app/500/150" class="rounded mx-auto d-block card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{com.nombre}}</h5>
                       <p class="card-text">{{com.mensaje}}</p>
                       <div>
-                        <p class="card-text muted">Subido el: {{com.created}}</p>
+                        <p class="card-text muted">Subido en: {{com.created}}</p>
                       </div>
+                      
                     </div>
+                    
                   </div>
-           
+           {% endfor %} 
              
-               {% endfor %}
-
+              
        </div>
+       
 </div>
         {% endblock %}

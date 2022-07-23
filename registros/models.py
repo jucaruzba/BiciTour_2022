@@ -6,7 +6,7 @@ class Tours(models.Model):
     
     disponible = models.BooleanField(default=True, verbose_name='Disponible')
     title = models.CharField(max_length=200, verbose_name='Titulo')
-    description = models.TextField(verbose_name='Descripción')
+    description = RichTextField(verbose_name='Descripción')
     fechaIni=models.DateTimeField(auto_now=False, null=True, verbose_name='Fecha de Inicio')
     ciudad = models.CharField(max_length=200, verbose_name='Ciudad')
     kmreC = models.IntegerField(verbose_name='Km recorridos')
