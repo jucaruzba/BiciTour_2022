@@ -73,5 +73,96 @@
         {% endfor %}
     </div>
 
+<br><br><br><br>
+
+<div id="sobre">
+    <div class="pt-3 pb-5" style="color: rgb(254, 254, 254); background-color: rgb(23, 21, 27);">
+        
+                <h1 class="text-center" style="font: 10em sans-serif;">Sobre nosotros</h1>
+                <p class="text-center" style="font-size: 15px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;">
+                    Somos una empresa 100% mexicana que se dedica a la venta de tours y actividades en Morelia Michoacan.<br><br>
+                    <b>Nuestra misión</b> es ofrecer una experiencia de viaje inolvidable a nuestros clientes.<br><br>
+
+                    <b>Nuestra visión</b>  es ser la mejor empresa de tours y actividades en Morelia Michoacan.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video src="{% static 'img/bici.mp4' %}" type="video/mp4" autoplay muted class="d-block w-100" loop></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenedorcard">
+        <svg width="100%" height="172" fill="none">
+            <path fill="#011116">
+              <animate repeatCount="indefinite" fill="freeze" attributeName="d" dur="15s"
+                values="
+                        M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
+            
+                        M0 86.3149C316 86.315 444 159.155 884 51.1554C1324 -56.8446 1320.29 34.1214 1538 70.4063C1814 116.407 2156 188.408 2560 86.315V232.317L0 232.316V86.3149Z;
+            
+                        M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z;
+            
+                        M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;"></animate>
+            </path>
+          </svg>
+    </div>
+
+<div style="background-color: #011116;">
+    <h1 class="text-center" style="font: 10em sans-serif; color: rgb(213, 239, 234);">Nuestros Colaboradores</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card border-0"  style="width: 18rem; background-color: #03182900;">
+                    <img src="{% static 'img/PERFIL1.jpg' %}" style="border-radius: 100%;" alt="...">
+                    <div class="card-body" style="background-color: #03182900;">
+                        <h5 class="card-title">Joseph Valencia Cisneros</h5>
+                        <p class="card-text">Rol: DESARROLLADOR DE SOFTWARE / PROGRAMADOR</p>
+                        <a href="https://nervous-ride-34ccc9.netlify.app/" target="_blank" class=" btn btn-primary">Visitar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card border-0" style="width: 18rem; background-color: #03182900;">
+                    <img src="{% static 'img/PERFIL2.jpeg' %}" style="border-radius: 100%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Armando</h5>
+                        <p class="card-text">Rol: ANALISTA DE SOFTWARE</p>
+                        <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0" style="width: 18rem; background-color: #03182900;">
+                    <img src="{% static 'img/PERFIL3.png' %}" style="border-radius: 100%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Luis Domingues</h5>
+                        <p class="card-text">Rol: ARQUITECTO DE SOFTWARE.</p>
+                        <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0" style="width: 18rem; background-color: #03182900;">
+                    <img src="{% static 'img/PERFIL3.png' %}" style="border-radius: 100%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Juan Carlos</h5>
+                        <p class="card-text">Rol: TESTER.</p>
+                        <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+</div>
 
     <br> {% endblock %}

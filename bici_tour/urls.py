@@ -27,6 +27,8 @@ urlpatterns = [
     path('contact/', views.contact, name='Contacto'),
     path('about/', views.about, name='About'),
     path('registrar/',views_registros.registrar,name="Registrar"),
+    path('subir',views_registros.archivos,name="Subir"),
+    path('consultasSQL',views_registros.consultasSQL,name="sql"),
 ]
 
 

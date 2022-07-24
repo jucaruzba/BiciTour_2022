@@ -12,10 +12,26 @@
     <title>{% block titulo %} {% endblock %}</title>
 </head>
 
+
+<style>
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(5, 58, 110, 0.3); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(7, 6, 97, 0.5);
+}
+</style>
+
 <body>
     <nav>
 
-        <nav class="navbar navbar-expand-lg  " style="background-color: #2ff4a2;">
+        <nav class="navbar navbar-expand-lg fixed-top " style="background-color: #2ff4a2;">
             <div class="container-fluid">
                 <a class="navbar-brand " href="#">BiciTour</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,19 +46,19 @@
                             <a class="nav-link " style="margin-left:60px ; " href="{%url 'Tours'%} ">Tours</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " style="margin-left:60px ; " href="{%url 'Experiencias'%} ">Experiences</a>
+                            <a class="nav-link " style="margin-left:60px ; " href="{%url 'sql'%} ">Experiences</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link " style="margin-left:60px ; " href="https://fascinating-griffin-209526.netlify.app/" target="_blank">Contact</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " style="margin-left:60px ; " href="{%url 'About'%} ">About</a>
+                            <a class="nav-link " style="margin-left:60px ; " href="{%url 'Principal' %}.#sobre">About</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
+<br><br>
 
 
     {% block contenido %} {% endblock %}
