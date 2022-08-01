@@ -5,15 +5,20 @@
 
 <br>
 
-<div class="card-group" style="margin-right:120px; margin-left: 120px;">
+<div class="card-group" style="margin-right:120px; margin-left: 120px; border-radius: 20px;" >
     {% for tour in tours %}
     <div class="card" style="margin-right:50px; border: 0;">
         <img src='{{ tour.foto.url}}' class="card-img-top rounded" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{tour.tile}}</h5>
-            <p class="card-text">{{tour.description|truncatechars:200}}</p>
+            <h5 class="card-title">{{tour.title}}</h5>
+            <p class="card-text">Descripción: {{tour.description}}</p>
             <p class="card-text">Site: {{tour.ciudad}}</p>
-
+            <p class="card-text">Inicia: 🗓️{{tour.fechaIni}}</p>
+            <p class="card-text">En la Ciudad de: {{tour.ciudad}}</p>
+            <p class="card-text">Km: ${{tour.KmreC}}</p>
+            <p class="card-text">Tiempo Estimado: {{tour.timeStimed}}</p>
+            <p class="card-text">Punto Inicial: {{tour.puntoIni}}</p>
+            <p class="card-text">costo: ${{tour.costo}}</p>
             <p class="card-text"><small class="text-muted">{{tour.created}}</small></p>
         </div>
     </div>

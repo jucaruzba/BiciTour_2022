@@ -38,12 +38,17 @@ def archivos(request):
             archivo =request.FILES['archivo']
             insert = Archivos(nombre=nombre, mensaje=mensaje, email=email, archivo=archivo)
             insert.save()
-            return render(request, 'registros/archivos.html')
+            archivos = Archivos.objects.all()
+            return render(request, 'registros/experiences.html', {'archivos': archivos})
         else:
             messages.error(request, 'Error al subir el archivo')
     else:
-        return render(request, 'registros/archivos.html', {'archivo':Archivos}, {'archivos': archivos})
+        return render(request, 'registros/archivos.html', {'archivo':Archivos})
 
 def consultasSQL(request):
     archivos=Archivos.objects.raw('SELECT id, nombre, email, mensaje, archivo FROM registros_archivos ORDER BY nombre DESC')
     return render (request, 'registros/archivos.html', {'archivos':archivos})
+
+def experiencias(request):
+    archivos=Archivos.objects.all()
+    return render(request, 'registros/experiences.html',{'archivos': archivos})

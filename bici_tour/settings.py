@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'inicio',
     'registros.apps.RegistrosConfig',
-    'ckeditor',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [

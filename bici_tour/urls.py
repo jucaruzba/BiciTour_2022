@@ -23,12 +23,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views_registros.registros, name='Principal'),
     path('tours/', views_registros.registros2, name='Tours'),
-    path('experiences/', views_registros.registros3, name='Experiencias'),
     path('contact/', views.contact, name='Contacto'),
     path('about/', views.about, name='About'),
     path('registrar/',views_registros.registrar,name="Registrar"),
     path('subir',views_registros.archivos,name="Subir"),
     path('consultasSQL',views_registros.consultasSQL,name="sql"),
+    path('experiences/',views_registros.experiencias,name="Experiencias"),
 ]
 
 
