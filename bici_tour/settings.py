@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'inicio',
     'registros.apps.RegistrosConfig',
+    'colorfield',
+
 ]
 
 MIDDLEWARE = [
@@ -81,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ejemplo',
         'USER': 'root',
-        'PASSWORD': 'JosephValencia',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
     }

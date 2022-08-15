@@ -47,7 +47,7 @@ class Archivos(models.Model):
     mensaje = models.TextField(null=True, verbose_name="Mensaje")
     archivo = models.FileField(upload_to="archivos", null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Creacion")
-    update  = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Actualizacion")
+    updated  = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Actualizacion")
     class Meta:
         verbose_name = "Experiencia"
         verbose_name_plural = "Experiencias"
